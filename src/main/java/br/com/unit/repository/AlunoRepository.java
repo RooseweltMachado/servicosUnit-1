@@ -7,5 +7,5 @@ import br.com.unit.domain.Aluno;
 
 @Repository
 public interface AlunoRepository extends CrudRepository<Aluno, Long>{
-
+	Aluno findByMatricula(String matricula);
 }
