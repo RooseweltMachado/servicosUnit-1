@@ -2,8 +2,18 @@ package br.com.unit;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
-@SpringBootApplication
+import br.com.unit.config.FileStorageConfig;
+
+@SpringBootApplication 
+@EntityScan("br.com.unit.domain")
+
+
+@EnableConfigurationProperties({
+	FileStorageConfig.class
+})
 public class ServicosUnit1Application {
 
 	public static void main(String[] args) {
