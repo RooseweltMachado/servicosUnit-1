@@ -12,21 +12,30 @@ public class Solicitacao {
 	private double qtdHoras; 
 	private String urlPdf;
 	private String matriculaAluno;
-	private String dataTermino;
+	private String atividade;
 	private boolean homolog;
 	
 	public Solicitacao(){}
 
 	public Solicitacao(Long id, String nomeCurso, double qtdHoras, String urlPdf, String matriculaAluno,
-			String dataTermino, boolean homolog) {
-		super();
+			String atividade, boolean homolog) {
 		this.id = id;
 		this.nomeCurso = nomeCurso;
 		this.qtdHoras = qtdHoras;
 		this.urlPdf = urlPdf;
 		this.matriculaAluno = matriculaAluno;
-		this.dataTermino = dataTermino;
+		this.atividade = atividade;
 		this.homolog = homolog;
+	}
+
+
+
+	public String getAtividade() {
+		return atividade;
+	}
+
+	public void setAtividade(String atividade) {
+		this.atividade = atividade;
 	}
 
 	public double getQtdHoras() {
@@ -77,12 +86,5 @@ public class Solicitacao {
 		this.matriculaAluno = matriculaAluno;
 	}
 
-	public String getDataTermino() {
-		return dataTermino;
-	}
-
-	public void setDataTermino(String dataTermino) {
-		this.dataTermino = dataTermino;
-	}
 	
 }

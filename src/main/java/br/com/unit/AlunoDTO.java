@@ -1,7 +1,7 @@
 package br.com.unit;
 
 public class AlunoDTO {
-
+	private String nomeAluno;
 	private String matricula;
 	private String senha;
 	private String curso;
@@ -12,9 +12,11 @@ public class AlunoDTO {
 	public AlunoDTO() {
 		
 	}
-
-	public AlunoDTO(String matricula, String senha, String curso, String turno, String fotourl,
+	
+	public AlunoDTO(String nomeAluno, String matricula, String senha, String curso, String turno, String fotourl,
 			double quantidadeHoras) {
+	
+		this.nomeAluno = nomeAluno;
 		this.matricula = matricula;
 		this.senha = senha;
 		this.curso = curso;
@@ -22,6 +24,16 @@ public class AlunoDTO {
 		this.fotourl = fotourl;
 		this.quantidadeHoras = quantidadeHoras;
 	}
+
+	public String getNomeAluno() {
+		return nomeAluno;
+	}
+
+	public void setNomeAluno(String nomeAluno) {
+		this.nomeAluno = nomeAluno;
+	}
+
+
 
 	public String getMatricula() {
 		return matricula;

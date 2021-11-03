@@ -8,6 +8,7 @@ public class Aluno {
 	
 	@Id @GeneratedValue
 	private Long id;
+	private String nomeAluno;
 	private String matricula;
 	private String senha;
 	private String curso;
@@ -16,6 +17,31 @@ public class Aluno {
 	private double quantidadeHoras;
 
 	public Aluno() {}
+
+	public String getNomeAluno() {
+		return nomeAluno;
+	}
+
+	public void setNomeAluno(String nomeAluno) {
+		this.nomeAluno = nomeAluno;
+	}
+
+
+
+	public Aluno(Long id, String nomeAluno, String matricula, String senha, String curso, String turno, String fotourl,
+			double quantidadeHoras) {
+		super();
+		this.id = id;
+		this.nomeAluno = nomeAluno;
+		this.matricula = matricula;
+		this.senha = senha;
+		this.curso = curso;
+		this.turno = turno;
+		this.fotourl = fotourl;
+		this.quantidadeHoras = quantidadeHoras;
+	}
+
+
 
 	public String getFotourl() {
 		return fotourl;
@@ -30,18 +56,6 @@ public class Aluno {
 	}
 
 	public void setQuantidadeHoras(double quantidadeHoras) {
-		this.quantidadeHoras = quantidadeHoras;
-	}
-
-	public Aluno(Long id, String matricula, String senha, String curso, String turno, String fotourl,
-			double quantidadeHoras) {
-		super();
-		this.id = id;
-		this.matricula = matricula;
-		this.senha = senha;
-		this.curso = curso;
-		this.turno = turno;
-		this.fotourl = fotourl;
 		this.quantidadeHoras = quantidadeHoras;
 	}
 

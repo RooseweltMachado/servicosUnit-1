@@ -24,6 +24,7 @@ public class AlunoController {
 	public Object cadastrarAluno(@RequestBody AlunoDTO alunoDTO) {
 		try {
 			Aluno aluno = new Aluno();
+			aluno.setNomeAluno(alunoDTO.getNomeAluno());
 			aluno.setMatricula(alunoDTO.getMatricula());
 			aluno.setFotourl(alunoDTO.getFotourl());
 			aluno.setSenha(alunoDTO.getSenha());

@@ -24,7 +24,7 @@ public class SolicitacaoController {
 		try {
 			Solicitacao solicitacao = new Solicitacao();
 			solicitacao.setMatriculaAluno(solicitacaoDTO.getMatriculaAluno());
-			solicitacao.setDataTermino(solicitacaoDTO.getDataTermino());
+			solicitacao.setAtividade(solicitacaoDTO.getAtividade());
 			solicitacao.setHomolog(false);
 			solicitacao.setNomeCurso(solicitacaoDTO.getNomeCurso());
 			solicitacao.setQtdHoras(solicitacaoDTO.getQtdHoras());
